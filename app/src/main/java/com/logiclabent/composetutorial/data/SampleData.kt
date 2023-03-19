@@ -1,6 +1,6 @@
 package com.logiclabent.composetutorial.data
 
-import com.logiclabent.composetutorial.Message
+import com.logiclabent.composetutorial.data.Message
 
 object SampleData {
     // Sample conversation data
