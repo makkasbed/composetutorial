@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeTutorialTheme {
-                Conversation(messages = SampleData.conversationSample)
+                Conversation(SampleData.conversationSample)
             }
         }
     }
