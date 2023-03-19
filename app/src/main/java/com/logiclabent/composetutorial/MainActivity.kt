@@ -59,5 +59,9 @@ fun MessageCard(msg: Message){
 @Preview
 @Composable
 fun PreviewMessageCard(){
-    MessageCard(msg = Message("Colleague","Hey, take a look at Jetpack compose, it is great"))
+    ComposeTutorialTheme {
+        Surface {
+            MessageCard(msg = Message("Colleague","Hey, take a look at Jetpack compose, it is great"))
+        }
+    }
 }
