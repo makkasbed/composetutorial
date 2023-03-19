@@ -12,6 +12,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.res.painterResource;
 import androidx.compose.foundation.Image;
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.draw.clip
@@ -23,10 +24,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Surface(modifier = Modifier.fillMaxSize()) {
-                MessageCard(msg= Message(author = "Android", body = "Jetpack compose"))
+            ComposeTutorialTheme {
+                Surface(modifier = Modifier.fillMaxSize()) {
+                    MessageCard(msg= Message(author = "Android", body = "Jetpack compose"))
+                }
             }
-
         }
     }
 }
@@ -43,11 +45,14 @@ fun MessageCard(msg: Message){
             modifier = Modifier
                 .size(40.dp)
                 .clip(CircleShape)
+                .border(1.5.dp, MaterialTheme.colors.secondary, CircleShape)
         )
         Spacer(modifier = Modifier.width(8.dp))
 
         Column {
-            Text(text=msg.author)
+            Text(text=msg.author,
+                color = MaterialTheme.colors.secondaryVariant
+            )
             Spacer(modifier = Modifier.height(4.dp))
             Text(text = msg.body)
         }
