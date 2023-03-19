@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.logiclabent.composetutorial.ui.theme.ComposeTutorialTheme
-import javax.xml.soap.Text
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,10 +22,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
+data class Message(val author: String, val body: String)
+
+
 @Composable
 fun MessageCard(name: String){
     Text(text="Hello $name")
@@ -35,12 +34,4 @@ fun MessageCard(name: String){
 @Composable
 fun PreviewMessageCard(){
     MessageCard("Android")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    ComposeTutorialTheme {
-        Greeting("Android")
-    }
 }
