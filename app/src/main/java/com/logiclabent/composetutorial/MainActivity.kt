@@ -23,6 +23,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.*
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
+import com.logiclabent.composetutorial.data.Message
 import com.logiclabent.composetutorial.data.SampleData
 import com.logiclabent.composetutorial.ui.theme.ComposeTutorialTheme
 
@@ -38,7 +39,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-data class Message(val author: String, val body: String)
+
 
 
 @Composable
