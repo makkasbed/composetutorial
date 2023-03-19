@@ -34,5 +34,5 @@ fun MessageCard(msg: Message){
 @Preview
 @Composable
 fun PreviewMessageCard(){
-    MessageCard("Android")
+    MessageCard(msg = Message("Colleague","Hey, take a look at Jetpack compose, it is great"))
 }
