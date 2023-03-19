@@ -3,6 +3,7 @@ package com.logiclabent.composetutorial
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MessageCard(msg=Message(author = "Android", body = "Jetpack compose"))
+            MessageCard(msg= Message(author = "Android", body = "Jetpack compose"))
         }
     }
 }
@@ -27,8 +28,11 @@ data class Message(val author: String, val body: String)
 
 @Composable
 fun MessageCard(msg: Message){
-    Text(text=msg.author)
-    Text(text = msg.body)
+    Column {
+        Text(text=msg.author)
+        Text(text = msg.body)
+    }
+
 }
 
 @Preview
