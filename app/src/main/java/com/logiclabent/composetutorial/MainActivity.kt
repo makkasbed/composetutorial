@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MessageCard("Android")
+            MessageCard(msg=Message(author = "Android", body = "Jetpack compose"))
         }
     }
 }
