@@ -26,8 +26,9 @@ data class Message(val author: String, val body: String)
 
 
 @Composable
-fun MessageCard(name: String){
-    Text(text="Hello $name")
+fun MessageCard(msg: Message){
+    Text(text=msg.author)
+    Text(text = msg.body)
 }
 
 @Preview
